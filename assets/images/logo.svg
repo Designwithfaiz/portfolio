@@ -3,7 +3,6 @@
     <style>
       .cls-1 {
         font-size: 100px;
-        opacity: 0.48;
         filter: url(#filter);
         fill: #fbfbfb;
         text-anchor: middle;
@@ -12,8 +11,8 @@
         font-style: italic;
       }
     </style>
-    <filter id="filter" x="426" y="173" width="308" height="112" filterUnits="userSpaceOnUse">
-      <feImage preserveAspectRatio="none" x="426" y="173" width="308" height="112" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzA4IiBoZWlnaHQ9IjExMiIgdmlld0JveD0iMCAwIDMwOCAxMTIiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMTU3LjkxNiIgeDI9IjE1MC4wODQiIHkyPSIxMTIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjA5NSIgc3RvcC1jb2xvcj0iIzdjN2M3YyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuOTA1IiBzdG9wLWNvbG9yPSIjZmZmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSIzMDgiIGhlaWdodD0iMTEyIi8+Cjwvc3ZnPgo="/>
+    <filter id="filter" x="346" y="171" width="308" height="112" filterUnits="userSpaceOnUse">
+      <feImage preserveAspectRatio="none" x="346" y="171" width="308" height="112" result="image" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMzA4IiBoZWlnaHQ9IjExMiIgdmlld0JveD0iMCAwIDMwOCAxMTIiPgogIDxkZWZzPgogICAgPHN0eWxlPgogICAgICAuY2xzLTEgewogICAgICAgIGZpbGw6IHVybCgjbGluZWFyLWdyYWRpZW50KTsKICAgICAgfQogICAgPC9zdHlsZT4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ibGluZWFyLWdyYWRpZW50IiB4MT0iMTU3LjkxNiIgeDI9IjE1MC4wODQiIHkyPSIxMTIiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwLjA5NSIgc3RvcC1jb2xvcj0iIzdjN2M3YyIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjAuOTA1IiBzdG9wLWNvbG9yPSIjZmZmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCBjbGFzcz0iY2xzLTEiIHdpZHRoPSIzMDgiIGhlaWdodD0iMTEyIi8+Cjwvc3ZnPgo="/>
       <feComposite result="composite" operator="in" in2="SourceGraphic"/>
       <feBlend result="blend" mode="multiply" in2="SourceGraphic"/>
     </filter>
