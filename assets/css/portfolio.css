@@ -85,3 +85,31 @@ body.pf-body:before{opacity:.035;background-size:84px 84px}
 .pf-footer{border-color:#1b1b1b}
 @media(max-width:700px){.pf-nav{background:#080808;border:1px solid #222}.pf-work-visual{height:280px}}
 @media(prefers-reduced-motion:reduce){.pf-page-hero,.pf-work-card,.pf-contact-layout,.pf-about-page{opacity:1;transform:none;transition:none}.pf-art:before,.pf-work-visual:before{display:none}}
+
+/* WORK PAGE — animated video placeholders */
+.pf-work-index{display:flex;gap:28px;margin-top:38px;font:9px 'DM Mono',monospace;letter-spacing:.14em;color:#777}
+.pf-work-index span:first-child{color:var(--lime)}
+.pf-placeholder-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.pf-project-slot{min-width:0}
+.pf-project-slot .pf-work-visual{height:440px;justify-content:space-between;padding:24px 20px;box-sizing:border-box;isolation:isolate}
+.pf-slot-number,.pf-slot-format{position:relative;z-index:2;font:9px 'DM Mono',monospace;letter-spacing:.12em;color:#aaa}
+.pf-slot-format{color:var(--lime)}
+.pf-slot-center{position:relative;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
+.pf-slot-center small{position:static;color:#aaa;font:8px 'DM Mono',monospace;letter-spacing:.14em}
+.pf-slot-center strong{font-size:clamp(38px,4.2vw,64px);line-height:.83;letter-spacing:-.09em}
+.pf-slot-center em{font:8px 'DM Mono',monospace;letter-spacing:.12em;color:var(--lime);font-style:normal;border:1px solid #c8ff0055;padding:9px 12px;border-radius:30px;margin-top:8px}
+.pf-slot-icon{display:grid;place-items:center;width:42px;height:42px;border:1px solid #c8ff0070;border-radius:50%;color:var(--lime);font-size:19px;animation:slot-pulse 2.8s ease-in-out infinite}
+.pf-slot-ai{background:radial-gradient(ellipse at 50% 45%,#344019 0,#11150b 35%,#070807 75%)!important}
+.pf-slot-reel{background:radial-gradient(ellipse at 50% 45%,#42201d 0,#180d0d 38%,#070707 78%)!important}
+.pf-slot-long{background:radial-gradient(ellipse at 50% 45%,#1d3140 0,#0c141a 40%,#070707 78%)!important}
+.pf-slot-ai:before,.pf-slot-reel:before,.pf-slot-long:before{opacity:.7;animation:slot-drift 9s ease-in-out infinite alternate}
+.pf-slot-ai .pf-slot-center strong{color:#e8ffb0}
+.pf-slot-reel .pf-slot-center strong{color:#ffd1c8}
+.pf-slot-long .pf-slot-center strong{color:#c6e8ff}
+.pf-slot-note{margin:30px 0 0;text-align:center;color:#555;font:8px 'DM Mono',monospace;letter-spacing:.12em}
+.pf-project-slot:hover .pf-slot-icon{animation-duration:1s;box-shadow:0 0 28px #c8ff0030}
+@keyframes slot-pulse{0%,100%{transform:scale(1);box-shadow:0 0 0 #c8ff0000}50%{transform:scale(1.08);box-shadow:0 0 24px #c8ff0025}}
+@keyframes slot-drift{from{transform:translate(-8%,-3%) rotate(-5deg)}to{transform:translate(8%,4%) rotate(5deg)}}
+@media(max-width:900px){.pf-placeholder-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.pf-project-slot .pf-work-visual{height:390px}}
+@media(max-width:600px){.pf-placeholder-grid{grid-template-columns:1fr}.pf-project-slot .pf-work-visual{height:390px}.pf-work-index{gap:14px;flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.pf-slot-icon,.pf-slot-ai:before,.pf-slot-reel:before,.pf-slot-long:before{animation:none}}
