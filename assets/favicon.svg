@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+<rect width="64" height="64" rx="15" fill="#080a08"/>
+<g transform="translate(32 32)">
+  <circle r="25" fill="none" stroke="#c8ff00" stroke-width="1.5" stroke-dasharray="5 7">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="12s" repeatCount="indefinite"/>
+  </circle>
+</g>
+<path d="M20 47V16h27v7H28v7h16v7H28v10z" fill="#c8ff00"/>
+<circle cx="48" cy="46" r="4" fill="#c8ff00">
+  <animate attributeName="r" values="3;5;3" dur="1.8s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="1;.55;1" dur="1.8s" repeatCount="indefinite"/>
+</circle>
+</svg>
