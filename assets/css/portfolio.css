@@ -137,3 +137,9 @@ body.pf-body:before{opacity:.035;background-size:84px 84px}
 
 /* Vertical aspect ratio for short-form reel embeds */
 .pf-reel-frame{aspect-ratio:9/16;}
+
+/* Reels: three vertical 9:16 cards per row on desktop */
+.pf-reels-grid{grid-template-columns:repeat(3,minmax(0,1fr));}
+.pf-reel-frame{aspect-ratio:9/16;}
+@media(max-width:900px){.pf-reels-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:600px){.pf-reels-grid{grid-template-columns:1fr;}}
