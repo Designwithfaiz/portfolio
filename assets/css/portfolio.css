@@ -329,3 +329,26 @@ body.pf-body:not(.pf-home) .pf-video-card .pf-work-meta h3{font-size:15px}
 @media(max-width:600px){
   .pf-home .pf-home-hero h1{font-size:clamp(94px,23vw,145px);line-height:.72}
 }
+
+
+/* HOMEPAGE HERO — smaller headline, clearer showreel */
+.pf-home .pf-home-hero h1{
+  font-size:clamp(76px,12.5vw,172px);
+  line-height:.78;
+  letter-spacing:-.06em;
+}
+.pf-home-video-bg iframe{
+  opacity:.62;
+  filter:grayscale(.08) brightness(.88) saturate(.92);
+}
+.pf-home-video-shade{
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.54) 0%,rgba(0,0,0,.32) 42%,rgba(0,0,0,.66) 100%),
+    radial-gradient(ellipse at center,rgba(0,0,0,.08),rgba(0,0,0,.48) 82%);
+}
+@media(max-width:600px){
+  .pf-home .pf-home-hero h1{
+    font-size:clamp(58px,15vw,92px);
+    line-height:.8;
+  }
+}
