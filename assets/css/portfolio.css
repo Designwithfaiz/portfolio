@@ -359,3 +359,10 @@ body.pf-body:not(.pf-home) .pf-video-card .pf-work-meta h3{font-size:15px}
 .pf-longform-grid .pf-video-frame{aspect-ratio:16/9}
 @media(max-width:900px){.pf-longform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.pf-longform-grid{grid-template-columns:1fr}}
+
+
+/* CONTACT FORM — inline AJAX feedback */
+.pf-form-status{min-height:22px;margin:14px 0 0;font-size:13px;line-height:1.5}
+.pf-form-status.is-success{color:#c8ff00}
+.pf-form-status.is-error{color:#ff8b80}
+.pf-submit:disabled{opacity:.6;cursor:wait}
