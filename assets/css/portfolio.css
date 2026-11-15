@@ -280,3 +280,52 @@ body.pf-body:not(.pf-home) .pf-video-card .pf-work-meta h3{font-size:15px}
 @media(prefers-reduced-motion:reduce){
   .pf-home-video-bg{display:none}
 }
+
+
+/* CINEMATIC HOMEPAGE TYPOGRAPHY */
+.pf-home{--cinema-serif:"Cormorant Garamond",Georgia,serif}
+.pf-home .pf-home-hero h1,
+.pf-home .pf-home-heading h2,
+.pf-home .pf-home-statement h2,
+.pf-home .pf-home-about h2,
+.pf-home .pf-home-contact h2{
+  font-family:var(--cinema-serif);
+  font-weight:600;
+  letter-spacing:-.055em;
+}
+.pf-home .pf-home-hero h1{
+  font-size:clamp(112px,19vw,260px);
+  line-height:.69;
+  letter-spacing:-.075em;
+  font-weight:600;
+}
+.pf-home .pf-home-hero h1 em,
+.pf-home .pf-home-heading h2 em,
+.pf-home .pf-home-statement h2 em,
+.pf-home .pf-home-about h2 em,
+.pf-home .pf-home-contact h2 em{
+  font-style:italic;
+  -webkit-text-stroke:.8px var(--lime);
+}
+.pf-home .pf-home-heading h2,
+.pf-home .pf-home-statement h2,
+.pf-home .pf-home-about h2,
+.pf-home .pf-home-contact h2{line-height:.82;letter-spacing:-.06em}
+.pf-home .pf-home-intro p,
+.pf-home .pf-home-project-meta strong,
+.pf-home .pf-home-service-row h3{font-family:Manrope,sans-serif}
+.pf-home .pf-home-art-type{
+  font-family:var(--cinema-serif);
+  font-weight:600;
+  letter-spacing:-.045em;
+  line-height:.78;
+}
+.pf-home .pf-home-about-mark{font-family:var(--cinema-serif);font-weight:600}
+.pf-home .pf-home-kicker,
+.pf-home .pf-home-index,
+.pf-home .pf-home-section-top,
+.pf-home .pf-home-cta,
+.pf-home .pf-home-contact>small{font-family:"DM Mono",monospace;letter-spacing:.16em}
+@media(max-width:600px){
+  .pf-home .pf-home-hero h1{font-size:clamp(94px,23vw,145px);line-height:.72}
+}
