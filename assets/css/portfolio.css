@@ -75,7 +75,7 @@ body.pf-body:before{opacity:.035;background-size:84px 84px}
 .pf-submit:hover{box-shadow:0 0 28px #c8ff0030}
 .pf-bottom a,.pf-all,.pf-about a,.pf-contact>a{border-color:#383838;transition:background .25s,color .25s,border-color .25s,transform .25s}
 .pf-bottom a:hover,.pf-all:hover,.pf-about a:hover,.pf-contact>a:hover{background:var(--lime);color:#050505;border-color:var(--lime);transform:translateY(-3px)}
-.pf-page-hero,.pf-work-card,.pf-contact-layout,.pf-about-page{opacity:0;transform:translateY(24px);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1)}
+.pf-page-hero,.pf-work-card,.pf-contact-layout,.pf-about-page{opacity:1;transform:none;transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1)}
 .pf-page-hero.in-view,.pf-work-card.in-view,.pf-contact-layout.in-view,.pf-about-page.in-view{opacity:1;transform:translateY(0)}
 .pf-work-card:nth-child(2),.pf-card:nth-child(2){transition-delay:.1s}
 .pf-work-card:nth-child(3),.pf-card:nth-child(3){transition-delay:.18s}
@@ -121,7 +121,7 @@ body.pf-body:before{opacity:.035;background-size:84px 84px}
 .pf-category-heading h2{margin:14px 0 0;font-size:clamp(38px,6vw,68px)}
 .pf-category-heading h2 i{font-style:normal;color:var(--lime)}
 .pf-video-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 20px}
-.pf-video-card{min-width:0;opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
+.pf-video-card{min-width:0;opacity:1;transform:none;transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}
 .pf-video-card.in-view{opacity:1;transform:translateY(0)}
 .pf-video-frame{position:relative;width:100%;aspect-ratio:16/9;background:#101010;border:1px solid #292929;overflow:hidden}
 .pf-video-frame:after{content:"";position:absolute;inset:9px;border:1px solid #ffffff20;pointer-events:none}
