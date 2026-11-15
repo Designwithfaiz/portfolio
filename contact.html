@@ -14,9 +14,46 @@
 <section class="pf-page-hero"><small>03 / CONTACT</small><h1>LET’S MAKE<br><i>IT HAPPEN.</i></h1><p>Have a project, a collaboration idea or just want to say hello? I’d love to hear from you.</p></section>
 <section class="pf-contact-layout">
 <div class="pf-contact-details"><small>GET IN TOUCH</small><h2>GOOD WORK<br>STARTS WITH<br><i>A CONVERSATION.</i></h2><div class="pf-contact-detail"><span>EMAIL</span><a href="mailto:designwithfaiz@gmail.com">designwithfaiz@gmail.com ↗</a></div><div class="pf-contact-detail"><span>LOCATION</span><p>India · Available worldwide</p></div><div class="pf-contact-detail"><span>SOCIAL</span><p><a href="https://www.instagram.com/design.withfaiz/" target="_blank" rel="noopener">Instagram ↗</a> &nbsp; <a href="https://dribbble.com/designwithfaiz" target="_blank" rel="noopener">Dribbble ↗</a> &nbsp; <a href="https://x.com/FaizMohammad_1" target="_blank" rel="noopener">X ↗</a></p></div></div>
-<div class="pf-form-wrap"><small> TELL ME ABOUT YOUR PROJECT</small><form action="https://formspree.io/f/mpwdkarw" method="POST"><label for="full-name">YOUR NAME</label><input type="text" name="full-name" id="full-name" placeholder="Name" required><label for="email">EMAIL ADDRESS</label><input type="email" name="email" id="email" placeholder="you@example.com" required><label for="subject">SUBJECT</label><input type="text" name="subject" id="subject" placeholder="What are you looking for?" required><label for="message">YOUR MESSAGE</label><textarea name="message" id="message" rows="5" placeholder="Tell me a little about your project..." required></textarea><button class="pf-submit" type="submit">SEND MESSAGE ↗</button></form></div>
+<div class="pf-form-wrap"><small> TELL ME ABOUT YOUR PROJECT</small><form id="contact-form" action="https://formspree.io/f/mpwdkarw" method="POST"><label for="full-name">YOUR NAME</label><input type="text" name="full-name" id="full-name" placeholder="Name" required><label for="email">EMAIL ADDRESS</label><input type="email" name="email" id="email" placeholder="you@example.com" required><label for="subject">SUBJECT</label><input type="text" name="subject" id="subject" placeholder="What are you looking for?" required><label for="message">YOUR MESSAGE</label><textarea name="message" id="message" rows="5" placeholder="Tell me a little about your project..." required></textarea><button class="pf-submit" type="submit">SEND MESSAGE ↗</button></form></div>
 </section>
 </main>
 <footer class="pf-footer"><a class="pf-brand" href="index.html">FAIZ<span>.</span></a><span>VIDEO EDITOR · MOTION DESIGNER</span><span>© 2026 FAIZ MOHAMMAD</span><a href="mailto:designwithfaiz@gmail.com">EMAIL ↗</a></footer>
 <script src="./assets/js/portfolio.js"></script>
+<script>
+(function(){
+  const form=document.getElementById('contact-form');
+  const status=document.getElementById('form-status');
+  if(!form||!status)return;
+  form.addEventListener('submit',async function(event){
+    event.preventDefault();
+    const button=form.querySelector('button[type="submit"]');
+    const original=button.textContent;
+    button.disabled=true;
+    button.textContent='SENDING...';
+    status.textContent='';
+    status.className='pf-form-status';
+    try{
+      const response=await fetch(form.action,{
+        method:'POST',
+        body:new FormData(form),
+        headers:{'Accept':'application/json'}
+      });
+      if(response.ok){
+        status.textContent='Thank you! Your message has been sent. I’ll get back to you soon.';
+        status.classList.add('is-success');
+        form.reset();
+      }else{
+        status.textContent='Sorry, your message could not be sent. Please try again or email me directly.';
+        status.classList.add('is-error');
+      }
+    }catch(error){
+      status.textContent='Something went wrong. Please check your connection and try again.';
+      status.classList.add('is-error');
+    }finally{
+      button.disabled=false;
+      button.textContent=original;
+    }
+  });
+})();
+</script>
 </body></html>
