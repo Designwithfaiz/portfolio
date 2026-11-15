@@ -352,3 +352,10 @@ body.pf-body:not(.pf-home) .pf-video-card .pf-work-meta h3{font-size:15px}
     line-height:.8;
   }
 }
+
+
+/* LONG-FORM — three compact landscape players in one desktop row */
+.pf-longform-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 16px}
+.pf-longform-grid .pf-video-frame{aspect-ratio:16/9}
+@media(max-width:900px){.pf-longform-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.pf-longform-grid{grid-template-columns:1fr}}
