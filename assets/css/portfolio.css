@@ -230,3 +230,53 @@ body.pf-body:not(.pf-home) .pf-video-card .pf-work-meta h3{font-size:15px}
  body.pf-body:not(.pf-home) .pf-work-section{padding:18px 20px 60px}
  body.pf-body:not(.pf-home) .pf-video-category{margin-bottom:48px}
 }
+
+
+/* HOMEPAGE — full-bleed muted looping showreel background */
+.pf-home-video-bg{
+  position:fixed;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+  pointer-events:none;
+  background:#050505;
+}
+.pf-home-video-bg iframe{
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:100vw;
+  height:56.25vw;
+  min-width:177.78vh;
+  min-height:100vh;
+  transform:translate(-50%,-50%) scale(1.06);
+  border:0;
+  opacity:.42;
+  filter:grayscale(.18) brightness(.68) saturate(.72);
+}
+.pf-home-video-shade{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.52) 42%,rgba(0,0,0,.82) 100%),
+    radial-gradient(ellipse at center,rgba(0,0,0,.18),rgba(0,0,0,.72) 82%);
+  mix-blend-mode:multiply;
+}
+.pf-home .pf-header,
+.pf-home main,
+.pf-home .pf-footer{
+  position:relative;
+  z-index:1;
+}
+.pf-home .pf-home-hero,
+.pf-home .pf-home-work,
+.pf-home .pf-home-services,
+.pf-home .pf-home-about,
+.pf-home .pf-home-contact,
+.pf-home .pf-home-statement{
+  background-color:transparent;
+}
+.pf-home .pf-home-marquee{background:rgba(5,5,5,.62)}
+@media(prefers-reduced-motion:reduce){
+  .pf-home-video-bg{display:none}
+}
